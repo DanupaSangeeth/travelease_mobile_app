@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search for destinations, places to go..."
+        android:padding="12dp"
+        android:background="@drawable/search_bar_bg"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"/>
+
+    <!-- Dynamic Content Section -->
+    <LinearLayout
+        android:id="@+id/dynamic_content_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="20dp">
+
+        <!-- To Go Places -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To Go Places"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Example Card 1 -->
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/card_bg"
+                    android:padding="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:src="@drawable/sample"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Place Name"
+                        android:textColor="#000000"
+                        android:layout_marginTop="10dp" />
+                </LinearLayout>
+
+                <!-- Repeat for other cards -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Other sections like Beautiful Spots, Things to Do can follow similar structure -->
+    </LinearLayout>
+
+    <!-- Quick Access Buttons -->
+    <LinearLayout
+        android:id="@+id/quick_access_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/dynamic_content_section"
+        android:layout_marginTop="20dp">
+
+        <!-- Camera Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Camera"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <!-- Gallery Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gallery"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+
+        <!-- Add more buttons like Map, Weather, etc. -->
+    </LinearLayout>
+</RelativeLayout>

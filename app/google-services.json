@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "581657090757",
+    "project_id": "mobileda-project",
+    "storage_bucket": "mobileda-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581657090757:android:e8b42e6374b9a6cfaeeeac",
+        "android_client_info": {
+          "package_name": "com.example.mobileda_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCft_DSzoHVM7tXErk0rg0CX9TI1IKVwhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
